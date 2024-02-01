@@ -1,0 +1,20 @@
+@charset "UTF-8";
+h3 {
+  color: pink;
+  font-size: 30px;
+}
+
+ul {
+  border: 1px solid #333;
+}
+
+:root {
+  --txt_color: rgb(72, 72, 186);
+  --border01:3px solid #f0f;
+}
+
+/* 의사클래스. 문서트리의 요소를 선택하는 선택자. html요소선택을 뜻함 */
+p {
+  color: var(--txt_color);
+  border: var(--border01);
+}/*# sourceMappingURL=sub.css.map */

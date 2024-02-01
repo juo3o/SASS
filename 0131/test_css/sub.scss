@@ -1,0 +1,28 @@
+@charset "utf-8";
+//sub.scss
+
+//변수 만들고 
+$color01:pink;
+$font_size_title:30px;
+$border01:1px solid #333;
+
+
+//글자색에 변수 적용
+h3{
+    color: $color01;
+    font-size: $font_size_title;
+};
+ul{border: $border01;}
+
+
+// 사스와 동시에 쓸 필요는 없음
+:root{
+    --txt_color: rgb(72, 72, 186);
+    --border01:3px solid #f0f;
+    }
+  /* 의사클래스. 문서트리의 요소를 선택하는 선택자. html요소선택을 뜻함 */
+    p{
+    color:var(--txt_color);
+    border:var(--border01);
+    };
+    
