@@ -1,0 +1,149 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+h2 {
+  font-size: 16px;
+  color: rgb(56, 136, 222);
+}
+
+pre {
+  border: 1px solid pink;
+  font-size: 16px;
+}
+
+.title02 {
+  font-size: 18px;
+  color: rgb(70, 113, 206);
+  font-weight: 600;
+}
+
+.title01 {
+  font-family: "Noto Sans KR", "맑은 고딕", Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  color: rgb(56, 136, 222);
+}
+
+.btn1 {
+  padding: 4px 10px;
+  color: #fff;
+  background: rgb(62, 193, 62);
+}
+
+.btn2 {
+  padding: 4px 10px;
+  color: #fff;
+  background: rgb(242, 61, 61);
+}
+
+.p01 {
+  width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.btn3 {
+  font-weight: bold;
+  font-size: 20px;
+  border: 1px solid #ccc;
+  padding: 5px 30px;
+  border-radius: 30px;
+  transition: 0.3s;
+  background: rgb(255, 255, 86);
+}
+
+.btn4 {
+  font-weight: bold;
+  font-size: 20px;
+  border: 1px solid #ccc;
+  padding: 5px 30px;
+  border-radius: 30px;
+  transition: 0.3s;
+  background: rgb(62, 193, 62);
+}
+
+.btn3:hover, .btn4:hover {
+  background: rgb(56, 136, 222);
+  color: #fff;
+}
+
+.toggle_btn {
+  width: 40px;
+  height: 40px;
+  display: block;
+  border: 1px solid #ccc;
+  position: relative;
+  cursor: pointer;
+}
+
+.bar {
+  position: absolute;
+  left: 1px;
+  display: inline-block;
+  width: 38px;
+  height: 3px;
+  background: #333;
+  transition: 0.3s;
+}
+
+.bar1 {
+  top: 5px;
+}
+
+.bar2 {
+  top: 18px;
+}
+
+.bar3 {
+  bottom: 5px;
+}
+
+.toggle {
+  width: 40px;
+  height: 40px;
+  display: block;
+  border: 1px solid #000;
+  position: relative;
+}
+
+#toggle:checked + label > .bar1 {
+  transform: rotate(45deg) translate(9px, 10px);
+}
+
+#toggle:checked + label > .bar2 {
+  opacity: 0;
+}
+
+#toggle:checked + label > .bar3 {
+  transform: rotate(-45deg) translate(8px, -8px);
+}
+
+.rotate45 {
+  transform: rotate(45deg);
+  top: 18px !important;
+}
+
+.rotate0 {
+  transform: rotate(0deg);
+  display: none;
+}
+
+.rotate_45 {
+  transform: rotate(-45deg);
+  top: 18px !important;
+}
+
+.fab, .fas {
+  color: rgb(56, 136, 222);
+  padding: 20px;
+  font-size: 30px;
+  border: 1px solid rgb(56, 136, 222);
+  border-radius: 15px;
+}
+
+.fab:hover, .fas:hover {
+  color: #fff;
+  background: rgb(242, 61, 61);
+  border: 1px solid rgb(242, 61, 61);
+  border-radius: 15px;
+  transition: 0.3s;
+}/*# sourceMappingURL=style.css.map */

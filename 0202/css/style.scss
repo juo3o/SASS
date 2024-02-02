@@ -1,0 +1,126 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+
+$font_s01:12px;
+$title01:16px;
+
+$color01:#333;
+$color02:rgb(56, 136, 222);
+$color03:rgb(242, 61, 61);
+$color04:rgb(62, 193, 62);
+$color05:rgb(255, 255, 86);
+$color06:#fff;
+
+h2 {font-size: $title01; color: $color02;}
+pre {border: 1px solid pink; font-size: $title01;}
+.title02{font-size: 18px; color: rgb(70, 113, 206); font-weight: 600;}
+
+//믹싱기법 함수만들기
+@mixin h3txt{
+    font-family: "Noto Sans KR", "맑은 고딕", Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: $color02;
+}
+@mixin btn{
+    padding: 4px 10px;
+    color: $color06;
+}
+@mixin txt_over{
+    overflow: hidden;
+    text-overflow: ellipsis; //...만들기
+    white-space: nowrap;
+}
+//@include로 함수적용
+.title01 {@include h3txt;}
+.btn1{@include btn; background: $color04;}
+.btn2{@include btn; background: $color03;}
+.p01{width: 250px; @include txt_over;}
+
+//공통버튼서식
+
+//시간변수
+$time:0.3s;
+
+@mixin btnFont{ //글자관련서식
+    font-weight: bold;
+    font-size: 20px;
+}
+@mixin btnArea{ //컬러,여백서식
+    border: 1px solid #ccc;
+    padding: 5px 30px;
+    border-radius: 30px;
+}
+@mixin btn{  //mixin끼리 중첩적용 함수만들기
+    @include btnFont;
+    @include btnArea;
+    transition: $time;
+}
+.btn3{@include btn; background: $color05;}
+.btn4{@include btn; background: $color04;}
+.btn3:hover, .btn4:hover{background: $color02; color: $color06;}
+
+
+//모바일 bar 서식
+.toggle_btn{
+    width: 40px; height: 40px;
+    display: block;
+    border: 1px solid #ccc;
+    position: relative;
+    cursor: pointer;
+}
+@mixin bar {
+    position: absolute;
+    left: 1px;
+    display: inline-block;
+    width: 38px; height: 3px;
+    background: $color01;
+    transition: $time;
+}
+.bar{@include bar;}
+.bar1{top: 5px;}
+.bar2{top: 18px;}
+.bar3{bottom: 5px;}
+
+.toggle{
+    width: 40px; height: 40px;
+    display: block;
+    border: 1px solid #000;
+    position: relative;
+}
+
+//체크박스로 회전
+#toggle:checked + label > .bar1{
+    transform: rotate(45deg) translate(9px, 10px);
+}
+#toggle:checked + label > .bar2{
+    opacity: 0;
+}
+#toggle:checked + label > .bar3{
+    transform: rotate(-45deg) translate(8px, -8px);
+}
+
+
+//제이쿼리로 회전
+.rotate45{transform: rotate(45deg); top: 18px !important;}
+.rotate0{transform: rotate(0deg); display: none;}
+.rotate_45{transform: rotate(-45deg); top: 18px !important;}
+
+
+//sns아이콘스타일서식
+@mixin icon{
+    color: $color02;
+    padding: 20px;
+    font-size: 30px;
+    border: 1px solid $color02;
+    border-radius: 15px;
+}
+@mixin hover{
+    color: $color06; 
+    background: $color03;
+    border: 1px solid $color03;
+    border-radius: 15px;
+    transition: $time;
+}
+.fab, .fas{@include icon;}
+.fab:hover, .fas:hover{@include hover;}
