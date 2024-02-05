@@ -1,0 +1,56 @@
+//전역변수
+$baseFont:'맑은 고딕', arial, sans-serif;
+$baseFontColor:#333;
+$baseFontSize:16px;
+$bigFontSize:30px;
+$boxWidth:1280px;
+$boxCenter:0px auto;
+$bgColor:rgb(239, 239, 134);
+
+
+body{
+    font-family:$baseFont;
+    font-size:$baseFontSize;
+    color:$baseFontColor;
+}
+h2{font-size: $bigFontSize;}
+#wrap{
+    background:$bgColor;
+    width:$boxWidth; height: 400px;
+    margin:$boxCenter;
+    //지역변수
+    // $font_Color:#f00;
+}
+
+@mixin divBox($bgColor1){//함수명에 매개변수(여러개,여러개,가능)
+    width: $boxWidth;
+    background: $bgColor1;
+}
+
+//박스1과 박스2에 각각 배경색 설정
+#box01{@include divBox(#f00);}
+#box02{@include divBox(#f0f);}
+
+
+@mixin btn($BGcolor:#ccc){
+    width: 200px; height: 30px;
+    border: 1px solid $BGcolor;
+    text-align: cneter;
+    color: #fff;
+    background: $BGcolor;
+}
+.btn{@include btn;}
+.btn03{@include btn(rgb(249, 123, 123));}
+.btn04{@include btn(rgb(51, 199, 51));}
+.btn05{@include btn(rgb(255, 179, 0));}
+
+
+// 목록테두리서식 설정
+@mixin list_border($w:1px, $s:solid, $c:#333){
+    border: $w $s $c;
+    margin-bottom:3px;
+}
+.list01 li:first-child{@include list_border(1px,solid,rgb(195, 84, 84))}
+.list01 li:nth-child(2){@include list_border(3px,double,rgb(45, 195, 45))}
+.list01 li:nth-child(3){@include list_border(3px,dotted,rgb(64, 64, 247))}
+.list01 li:last-child{@include list_border(3px,dashed,rgb(214, 214, 12))}

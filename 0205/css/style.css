@@ -1,0 +1,83 @@
+@charset "UTF-8";
+body {
+  font-family: "맑은 고딕", arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+#wrap {
+  background: rgb(239, 239, 134);
+  width: 1280px;
+  height: 400px;
+  margin: 0px auto;
+}
+
+#box01 {
+  width: 1280px;
+  background: #f00;
+}
+
+#box02 {
+  width: 1280px;
+  background: #f0f;
+}
+
+.btn {
+  width: 200px;
+  height: 30px;
+  border: 1px solid #ccc;
+  text-align: cneter;
+  color: #fff;
+  background: #ccc;
+}
+
+.btn03 {
+  width: 200px;
+  height: 30px;
+  border: 1px solid rgb(249, 123, 123);
+  text-align: cneter;
+  color: #fff;
+  background: rgb(249, 123, 123);
+}
+
+.btn04 {
+  width: 200px;
+  height: 30px;
+  border: 1px solid rgb(51, 199, 51);
+  text-align: cneter;
+  color: #fff;
+  background: rgb(51, 199, 51);
+}
+
+.btn05 {
+  width: 200px;
+  height: 30px;
+  border: 1px solid rgb(255, 179, 0);
+  text-align: cneter;
+  color: #fff;
+  background: rgb(255, 179, 0);
+}
+
+.list01 li:first-child {
+  border: 1px solid rgb(195, 84, 84);
+  margin-bottom: 3px;
+}
+
+.list01 li:nth-child(2) {
+  border: 3px double rgb(45, 195, 45);
+  margin-bottom: 3px;
+}
+
+.list01 li:nth-child(3) {
+  border: 3px dotted rgb(64, 64, 247);
+  margin-bottom: 3px;
+}
+
+.list01 li:last-child {
+  border: 3px dashed rgb(214, 214, 12);
+  margin-bottom: 3px;
+}/*# sourceMappingURL=style.css.map */
